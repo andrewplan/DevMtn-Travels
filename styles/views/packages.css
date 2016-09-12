@@ -1,80 +1,104 @@
-.packages-main {
+.package-card {
     display: flex;
     flex-direction: column;
-}
-
-.package-card {
-    width:100%;
-    text-align: center;
-    margin-bottom: 20px;
+    width: 75%;
+    margin: 25px auto;
+    padding-bottom:  15px;
     box-shadow: 0px 2px 4px 0px rgba(208,208,208,0.50);
+
 }
 
 .package-card img {
     width: 100%;
 }
 
-.package-card h6 {
+.package-inner-left {
+    width: 100%;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.package-inner-left h6 {
     font-family: 'Arimo', sans-serif;
-    font-size: 24px;
-    margin: 10px 0;
-    color: #555555;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
 
 }
 
-.package-header {
+.package-inner-left h1 {
     color: #59B5C7;
+    margin-bottom: 25px;
     font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.package-inner-right {
+    width: 100%;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.package-inner-right h3 {
+    color: #000;
+    width: 100%;
+    margin: 0 auto 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
 
 }
 
-.package-card p {
-    width: 90%;
-    margin: 0 auto 10px;
-}
-
-.package-card button {
-    background: #4BACC1;
-    color: #FFF;
+.package-inner-left p {
     width: 90%;
     margin: auto;
-    padding: 15px;
-    font-size: 16px;
-
 }
 
-@media(min-width: 800px) {
-    .packages-main {
+.package-inner-right button {
+    width: 100%;
+    padding: 12px;
+    background: #4BACC1;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+}
+
+@media(min-width: 900px) {
+    .package-card {
         flex-direction: row;
+        width: 100%;
+        margin: 0 auto -3px;
+        padding-bottom:  0;
+        box-shadow: 0px 2px 4px 0px rgba(208,208,208,0.50);
     }
 
-    .package-card {
-        padding-bottom: 20px;
+    .package-inner-left {
+        width: 33%;
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .package-inner-right {
+        width: 33%;
+    }
+
+    .package-inner-right h3 {
+        width: 80%;
+        margin: 25px auto 25px;
+        line-height: 1.3;
+    }
+
+    .image-container {
+        width: 400px;
     }
 
     .package-card img {
-        height: 260px;
+        width: 100%;
     }
-
-    .package-header {
-        margin-bottom: 20px;
-
-    }
-
-    .package-card h6 {
-        margin: 20px 0;
-
-    }
-
-    .package-card p {
-        height: 95px;
-
-    }
-
-    .package-card button {
-      align-self: flex-end;
-
+    .package-inner-right button {
+        width: 70%;
+        margin: auto;
     }
 }

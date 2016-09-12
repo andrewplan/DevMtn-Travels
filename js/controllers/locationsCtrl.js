@@ -1,4 +1,4 @@
 angular.module( 'devmtnTravel' )
-    .controller( 'locationsCtrl', function( $scope, $state, mainSrv ) {
-        $scope.travelInfo = mainSrv.getTravelInfo();        
+    .controller( 'locationsCtrl', function( $scope, mainSrv ) {
+        $scope.travelInfo = mainSrv.getTravelInfo()
 } )
