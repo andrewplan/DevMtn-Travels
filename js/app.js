@@ -1,5 +1,8 @@
 angular.module('devmtnTravel', ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider
+            .otherwise('/');
+
         $stateProvider
             .state('home',{
                 url:'/',
@@ -18,22 +21,19 @@ angular.module('devmtnTravel', ['ui.router'])
             .state('packages',{
                 url:'/packages',
                 templateUrl: "../views/packages.html",
-                controller: 'mainCtrl',
+                controller: 'packagesCtrl',
                 controllerAs: 'vm'
             })
             .state('booked',{
                 url:'/booked/:id',
                 templateUrl: "../views/booked.html",
-                controller: 'mainCtrl',
+                controller: 'bookedCtrl',
                 controllerAs: 'vm'
             })
             .state('locations',{
                 url:'/locations',
                 templateUrl: "../views/locations.html",
-                controller: 'mainCtrl',
+                controller: 'locationsCtrl',
                 controllerAs: 'vm'
             });
-
-        $urlRouterProvider
-            .otherwise('/');
     });
